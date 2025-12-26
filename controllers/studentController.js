@@ -19,3 +19,14 @@ export const addStudents=async(req,res)=>{
         res.status(500).json({error:error.message});
     }
 }
+export const getElementById=async(req,res)=>{
+    try{
+        const  id=req.params.id;
+        const data=await student.findById({_id:id});
+        console.log(data);
+        res.status(200).json(data);
+    }
+    catch(error){
+        res.status(500).json({error:error.message});
+    }
+}
