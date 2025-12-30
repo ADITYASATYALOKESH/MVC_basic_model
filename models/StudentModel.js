@@ -8,7 +8,7 @@ const studentSchema=mongoose.Schema(
         type:String
        },
        StuPhone:{
-        typo:Number
+        type:Number
        }
     }
 );
